@@ -1,7 +1,9 @@
+import { Profile } from './components/Profile'
+
 export function Blog() {
   return (
     <div>
-      <p>Hello World</p>
+      <Profile />
     </div>
   )
 }
