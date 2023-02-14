@@ -5,8 +5,8 @@ import { Profile } from './components/Profile'
 import { SearchInput } from './components/SearchInput'
 import { PostListContainer } from './styles'
 
-const username = import.meta.env.VITE_GITHUB_USERNAME
-const repoName = import.meta.env.VITE_GITHUB_REPONAME
+// const username = import.meta.env.VITE_GITHUB_USERNAME
+// const repoName = import.meta.env.VITE_GITHUB_REPONAME
 export interface IPosts {
   title: string
   body: string
@@ -27,7 +27,7 @@ export function Blog() {
     try {
       setIsLoading(true)
       const response = await api.get(
-        `/search/issues?q=${query}%20repo:${username}/${repoName}`,
+        `/search/issues?q=${query}%20repo:pedrohbcosta/github_blog`,
       )
 
       console.log(response.data)
