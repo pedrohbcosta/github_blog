@@ -30,7 +30,6 @@ export function Blog() {
         `/search/issues?q=${query}%20repo:pedrohbcosta/github_blog`,
       )
 
-      console.log(response.data)
       setPosts(response.data.items)
     } finally {
       setIsLoading(false)
@@ -44,7 +43,7 @@ export function Blog() {
   return (
     <div>
       <Profile />
-      <SearchInput />
+      <SearchInput postsLength={posts.length} getPosts={getPosts} />
       <PostListContainer>
         {posts.map((post) => (
           <PostCard key={post.number} post={post} />
