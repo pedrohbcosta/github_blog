@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { Loading } from '../../components/Loading'
 import { api } from '../../lib/axios'
 import { PostCard } from './components/PostCard'
 import { Profile } from './components/Profile'
@@ -44,11 +45,17 @@ export function Blog() {
     <div>
       <Profile />
       <SearchInput postsLength={posts.length} getPosts={getPosts} />
-      <PostListContainer>
-        {posts.map((post) => (
-          <PostCard key={post.number} post={post} />
-        ))}
-      </PostListContainer>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <PostListContainer>
+            {posts.map((post) => (
+              <PostCard key={post.number} post={post} />
+            ))}
+          </PostListContainer>
+        </>
+      )}
     </div>
   )
 }
