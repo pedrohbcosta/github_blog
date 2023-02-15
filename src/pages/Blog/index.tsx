@@ -6,8 +6,8 @@ import { Profile } from './components/Profile'
 import { SearchInput } from './components/SearchInput'
 import { PostListContainer } from './styles'
 
-// const username = import.meta.env.VITE_GITHUB_USERNAME
-// const repoName = import.meta.env.VITE_GITHUB_REPONAME
+// const USERNAME = import.meta.env.VITE_GITHUB_USERNAME
+// const REPONAME = import.meta.env.VITE_GITHUB_REPONAME
 export interface IPosts {
   title: string
   body: string

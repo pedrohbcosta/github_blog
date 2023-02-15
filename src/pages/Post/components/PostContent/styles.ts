@@ -6,4 +6,10 @@ export const PostContentContainer = styled.section`
   gap: 1rem;
   padding: 2rem 2.5rem;
   margin-bottom: 8rem;
+
+  h1,
+  h2,
+  h3 {
+    color: ${({ theme }) => theme.colors['brand-blue']};
+  }
 `
